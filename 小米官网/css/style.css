@@ -16,6 +16,9 @@ img{
     width:1226px;
     margin:0 auto;
 }
+body{
+    height: 10000px;
+}
 /*banner样式开始*/
 .banner{
     height:120px;

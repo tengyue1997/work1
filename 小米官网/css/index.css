@@ -437,8 +437,74 @@
         top: -2px;
     }
 }
+.box-right ul{
+    display: none;
+}
+.box-right .box-active{
+    display: block;
+}
 /*家电结束*/
+/*内容开始*/
+.container-box{
+    height: 420px;
+}
+.container-box .con-item{
+    width: 296px;
+    height: 420px;
+    background: #ffffff;
+    margin-left: 14px;
+    float: left;
+}
+.container-box .con-first-item{
+    margin-left: 0px;
 
+}
+.book{
+    border-top:1px solid #ffac13;
+    color: #ffac13;
+}
+.con-item h2{
+    margin:45px 0 18px;
+    text-align: center;
+    height: 24px;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.con-carousel li{
+    width: 296px;
+    float:left;
+}
+.con-name{
+    font-size:20px;
+    color:#333;
+    font-weight: 400;
+    text-align: center;
+    display:block;
+    margin-bottom: 5px;
+}
+.con-desc{
+    font-size: 12px;
+    color: #b0b0b0;
+    display: block;
+    text-align: center;
+    margin: 0 48px 10px;
+}
+.con-price{
+    display:block;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
 
+}
+.con-pic{
+    display:block;
+    text-align: center;
+}
+.carousel-box{
+    width: 888px;
+    overflow: hidden;
+}
+/*内容结束*/
 
 

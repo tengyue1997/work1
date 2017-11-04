@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    随机生成两个小数给变量x.y，然后显示这两个数中的最大值。（提示：语句“var x=Math.random();” 0到1随机数 包括0 不包括1可为变量生成一个随机
+//    小数：另外，使用条件运算符‘'?:")
+//    var x = Math.random(),
+//        y = Math.random();
+//    var max = x>y?x:y;
+//    console.log("x="+x+",y="+y+",max="+max);
+
+//如果某年的年份值是4的倍数并且不是100的倍数，或者该年份值是400的倍数，那么这一年就是闰年。请编制一个页面，该页面显示当天是否处于闰年。
+//    function isLeaP(year) {
+//        return((year%4==0 && year%100!=0)||year%400==0)
+//    }
+//    var date = new Date();
+//    var year = date.getFullYear();
+//    var str = isLeaP(year)?'今年是闰年':'今年不是闰年';
+//    console.log(str);
+
+//编写程序，计算10!(即 1*2*3＊·…10）的结果(10的阶乘)。
+//        function fac(n) {
+//            if(n==1){
+//                return 1;
+//            }
+//            return n*fac(n-1);
+//        }
+//        console.log(fac(10));
+////        递归算法，在自身里调用
+////    function fac1(n){
+////        var sum=1;
+////        for(var i = 1;i<=n;i++)
+////        {
+////            sum=sum*i;
+////        }
+////        return sum;
+////
+////}
+////        console.log(fac1(10));
+////编写程序，计算 1!+2!+3!+…..＋10！的结果
+//        var sum=0;
+//        for(var i= 1;i<=10;i++){
+//            sum=sum+fac(i);
+//        }
+//        console.log(sum);
+
+
+//5在页面上输出如下数字图案。
+//1
+//1 2
+//1 2 3
+//1 2 3 4
+//1 2 3 4 5
+//其中，每行的数字之间有一个空格间隔。
+//    function aa(n) {
+//        for (var i = 1; i <= 5; i++) {
+//            for (j = 1; j <= i; j++) {
+//                document.write(j + "&nbsp");
+//            }
+//            document.write('<br/>');
+//        }
+//    }
+//    aa(9);
+
+
+//在页面上输出如下图案。
+//其中，每行的星号"*"之间有一个空格间隔。
+//    for(var i=1;i<=5;i++){
+//        for(var j=1;j<=5-i;j++){
+//            document.write("&nbsp");
+//        }
+//        for(k =1;k<=i;k++){
+//            document.write("*&nbsp");
+//        }
+//        document.write('<br/>');
+//    }
+
+//8.求所有满足条件的四位数ABCD，它是13的倍数，且第3位数加上第2位数等于第4位数（即：A=B+C）。
+//（提示：对于四位数的整数x，通过Math.floor(x/1000)可求出第4位的数字，其他位数的提取也类似）
+//    for(var i=1000;i<=9999;i++){
+//        if(i%13==0 && Math.floor(i/1000)==(Math.floor(i%1000/100)+Math.floor(i%100/10))){
+//            document.write(i+"<br/>");
+//        }
+//    }
+
+//编写一个判断某个非负整数是否能够同时被3,5,7整除的函数
+//然后在页面上输出1~1000之间所有能同时被3,5,7整除的整数，并要求每行显示6个这样的数。
+//    function aa(num) {
+//        if(num>0 && (parseInt(num)==num)&&num%3==0&&num%5==0&&num%7==0){
+//            return true;
+//        }
+//        return false;
+//    }
+//    var count=0
+//    for(var i=1;i<=1000;i++){
+//        if(aa(i)){
+//            count++;
+//            document.write(i+",");
+//            if(count%6==0){
+//                document.write('</br>');
+//            }
+//
+//        }
+//    }
+
+//4.在页面上编程输出100~1000之间的所有素数，并要求每行显示6个素数。
+//    function sushu(num){
+//        for(var i=2;i<num;i++){
+//            if(num%i==0){
+//                return false;
+//            }
+//        }
+//        return true;
+//    }
+//    var count=0;
+//    for(var j=100;j<=1000;j++){
+//        if(sushu(j)){
+//            count++;
+//            document.write(j+",");
+//            if(count%6==0){
+//                document.write('</br>');
+//            }
+//        }
+//    }
+
+//7.斐波纳契（Fibonacci）数列的第一项是1，第二项是1，以后各项都是前两项的和。
+//试用递归函数和非递归函数各编写一个程序，求斐波纳契数列第N项的值。
+    //递归
+//    function fib(n) {
+//        if(n<=2){
+//            return 1;
+//        }
+//        return arguments.callee(n-1)+arguments.callee(n-2);
+//    }
+//    console.log(fib(6));
+    //非递归
+//    function fib1(n) {
+//        if(n<=2){
+//            return 1;
+//        }
+//        var arr=[1,1];
+//        for(var i=2;i<n;i++){
+//            arr[i]=arr[i-1]+arr[i-2];
+//        }
+//        return arr[n-1];
+//    }
+//    console.log(fib1(6));
+
+//8.编写函数，用下面的公式计算π的近似值。
+//    function pi(n) {
+//        var sum=0;
+//        for(i=1;i<=n;i++){
+//            sum+=Math.pow(-1,i-1)/(2*i-1);
+//        }
+//        return sum*4;
+//    }
+//    console.log(pi(1000000));
+
+//9.利用全局变量和函数，设计模拟幸运数字机游戏。设幸运数字为8，每次由计算机随机产生3个1-9之间(包括1和9）的随机数
+//，当这3个随机数中有一个数字为8时，就算赢了一次，要求利用函数计算获胜率。
+    var x,y,z,win,isContinue=true,count=0,wNum=0;
+    function game() {
+        x=Math.floor(Math.random()*9)+1;
+        y=Math.floor(Math.random()*9)+1;
+        z=Math.floor(Math.random()*9)+1;
+        count++;
+        if(x==8||y==8||z==8){
+            win='赢';
+            wNum++;
+        }else {
+            win='输';
+        }
+    }
+    while(isContinue){
+        game();
+        isContinue=confirm(x+' '+y+' '+z+'\n'+win+"\n"+"获胜率是:"+(wNum/count)*100+'%');
+    }
+
+</script>
+
+</body>
+</html>

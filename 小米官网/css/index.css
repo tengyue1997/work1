@@ -454,6 +454,7 @@
     background: #ffffff;
     margin-left: 14px;
     float: left;
+    position: relative;
 }
 .container-box .con-first-item{
     margin-left: 0px;
@@ -504,6 +505,54 @@
 .carousel-box{
     width: 888px;
     overflow: hidden;
+}
+.con-carousel{
+    overflow: hidden;
+}
+.con-btn-box{
+    /*text-align: center;//对定位浮动元素有影响*/
+    position: absolute;
+    bottom: 15px;
+    left:50%;
+    margin-left: -56px;
+}
+.con-btn-box li{
+    width: 10px;
+    height: 10px;
+    padding: 10px;
+    margin: 0 2px;
+    display: inline-block;
+    cursor: pointer;
+}
+.con-btn-box span{
+    width: 6px;
+    height: 6px;
+    background: #b0b0b0;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 2px;
+    border:2px solid #ffffff;
+}
+.btn-active span{
+    border:2px solid #ff6700;
+    background: #ffffff;
+}
+.con-prev-btn,.con-next-btn{
+    width: 20px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    background: #e0e0e0;
+    color:#ffffff;
+    position: absolute;
+    top:50%;
+    font-weight: bold;
+}
+.con-prev-btn{
+    left: 0px;
+}
+.con-next-btn{
+    right: 0;
 }
 /*内容结束*/
 

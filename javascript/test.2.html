@@ -230,8 +230,44 @@
 
 //6.设计一个程序，它（使用一个数组）接收用户输入的7门课程的成绩，
 //然后在页面上显示其总成绩和平均分，并列出小于60的成绩。
-    prompt("")
+//    var num=1,isContinue=true;
+//    var sum=0,average;
+//    var arr=[];
+//    var str="";
+//    while(num<8 && isContinue!=null) {
+//        isContinue=prompt("请输入第" + num + "门成绩");
+//        arr.push(isContinue);
+//        num++;
+//    }
+//    for(var i=0;i<arr.length;i++){
+//        sum+=parseInt(arr[i]);
+//        if(arr[i]<60){
+//            str+=arr[i]+",";
+//        }
+//    }
+//    average=Math.round(sum/7);
+//    document.write("总成绩:"+sum+"<br/>平均分："+average.toFixed(1)+"<br/>不及格成绩："+str)
 
+//8.设计一个函数DayOfYear(d)，它接必一个日期参数d，
+//返回一个该日期是所在年份的第几天，如DayOfYear(2000,2,8)的返回值是39.
+//（提示：①定义一个数组months=new Array（31,28,31,30,31,30,31,31,30,31，30,31）记录每个月少天：
+//②定义一个辅助函数IsLeapYear(y)判定某个年份是否闰年，以确定2月份的天数是28还是29。）
+        var months=new Array(31,28,31,30,31,30,31,31,30,31,30,31);
+        function DayOfYear(year,month,day){
+            var result=0;
+            if(IsLeapYear(year)){
+                months[1]=29;
+            }
+            for(var i=0;i<month-1;i++){
+                result+=months[i];
+            }
+            result+=day;
+            return result;
+    }
+    function IsLeapYear(year) {
+        return((year%4==0 && year%100!=0)||year%400==0)
+    }
+    console.log(DayOfYear(2000,3,8));
 </script>
 
 </body>

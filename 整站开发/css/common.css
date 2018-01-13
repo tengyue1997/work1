@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 5000px;
+}
+ul{
+    list-style:none;
+}
+a{
+    text-decoration: none;
+}
+#header{
+    overflow: hidden;
+}
+.wrapper{
+    width: 1002px;
+    margin:0 auto;
+}
+/*header开始*/
+#logo{
+    width: 196px;
+    height: 120px;
+    float: left;
+}
+#logo a{
+     margin-top: 35px;
+     float: left;
+ }
+.nav{
+    float: left;
+    margin-left: 100px;
+    margin-top: 49px;
+}
+.nav li{
+    float: left;
+    padding: 0 25px 0 25px;
+    position: relative;
+}
+.nav li::after{
+    content: '';
+    height: 14px;
+    width: 1px;
+    background: #6b6b6b;
+    display: block;
+    position: absolute;
+    right: 0;
+    top:50%;
+    margin-top:-7px;
+}
+.nav a{
+    color: #626262;
+    font-size: 15px;
+}
+.nav .active a{
+    color: #00aeff;
+}
+.nav li.nol::after{
+    display: none;
+}
+.search{
+    width: 131px;
+    height: 31px;
+    float: right;
+}
+.search a{
+    margin-top: 45px;
+    float: right;
+}
+#lb{
+    background: #31333e;
+}
+.lunbo-wrapper{
+    position: relative;
+}
+.prev-btn,.next-btn{
+    width: 40px;
+    height: 60px;
+    position: absolute;
+    top:50%;
+    margin-top:-30px;
+    cursor:pointer;
+}
+.prev-btn{
+    left:0px;
+    background: url("../images/icons.png") -27px -6px;
+}
+.next-btn{
+    right:0px;
+    background: url("../images/icons.png") -101px -6px;
+}
+
+/*header结束*/
+/*content开始*/
+.con-one{
+    background: url("../images/content.png");
+}
+.con-two{
+    background: url("../images/content.png");
+}
+.con-three{
+    background: url("../images/content.png");
+}
+.con-img{
+    width: 164px;
+    height: 130px;
+    display: block;
+    margin-top: 12px;
+    margin-left: 86px;
+}
+
+.content-box li{
+    float: left;
+    width: 334px;
+    margin-top: 79px;
+    text-align: center;
+}
+.content h1{
+    font-size: 30px;
+    color: #31333e;
+    font-weight: 400;
+}
+
+
+/*content结束*/

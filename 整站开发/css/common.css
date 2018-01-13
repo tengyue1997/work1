@@ -94,13 +94,13 @@ a{
 /*header结束*/
 /*content开始*/
 .con-one{
-    background: url("../images/content.png");
+    background: url("../images/content.png") -1px -9px;
 }
 .con-two{
-    background: url("../images/content.png");
+    background: url("../images/content.png") -196px -9px;
 }
 .con-three{
-    background: url("../images/content.png");
+    background: url("../images/content.png") -382px -9px;
 }
 .con-img{
     width: 164px;
@@ -121,6 +121,15 @@ a{
     color: #31333e;
     font-weight: 400;
 }
-
+.con-text{
+    font-size: 15px;
+    color: #31333e;
+    margin-top: 5px;
+}
+.con-more{
+    font-size: 15px;
+    color: #00aeff;
+    margin-top: 21px;
+}
 
 /*content结束*/

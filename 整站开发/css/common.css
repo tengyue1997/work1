@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    height: 5000px;
+    height: 1850px;
 }
 ul{
     list-style:none;
@@ -131,5 +131,98 @@ a{
     color: #00aeff;
     margin-top: 21px;
 }
-
+#con-con{
+    height: 492px;
+}
 /*content结束*/
+/*works开始*/
+.works-img img{
+    width: 250px;
+    height: 200px;
+    display: inline-block;
+    float: left;
+}
+#works{
+    height: 500px;
+    background: #e2e7ed;
+}
+.works-img{
+    overflow: hidden;
+}
+.works-wrapper h1{
+    font-size: 30px;
+    color:#626262;
+    padding-top: 23px;
+    margin-bottom: 9px;
+    font-weight: 400;
+}
+
+/*works结束*/
+/*clients开始*/
+#clients{
+    height: 154px;
+}
+.clients-box{
+    position: relative;
+}
+.clients-box h1{
+    font-size: 30px;
+    color:#626262;
+    font-weight: 400;
+    margin-top: 25px;
+}
+.clients-pre-btn,.clients-next-btn{
+    width: 37px;
+    height: 90px;
+    position: absolute;
+    cursor:pointer;
+    top:40%;
+}
+.clients-pre-btn{
+    left:0px;
+    background: url("../images/clients-btn.png") -7px -8px;
+}
+.clients-next-btn{
+    right:0px;
+    background: url("../images/clients-btn.png") -54px -8px;
+}
+.clients-img1{
+    margin-left: 25px;
+}
+
+/*clients结束*/
+/*footer开始*/
+.footer-nav{
+    margin-left: 0;
+}
+.footer-nav li{
+    padding: 0 12px 0 12px;
+}
+.footer-nav .footer-navone{
+    padding-left: 0;
+}
+.footer-nav li.nol::after{
+    display: none;
+}
+.footer-logo{
+    float: right;
+    margin-top: 45px;
+}
+.footer-text{
+    float: left;
+    color: #626262;
+}
+.footer-text .footerlast{
+    margin-top: 35px;
+    font-size: 12px;
+
+}
+#footer{
+    background: #31333e;
+    overflow: hidden;
+    height: 176px;
+}
+
+
+
+/*footer结束*/

@@ -14,8 +14,9 @@
         #container{
             height: 100%;
             background: url("img/bg.jpg") 0 0;
+            position: relative;
         }
-        .img{
+        #container .img{
             width: 125px;
             height: 125px;
             border: 5px solid #fff;
@@ -30,6 +31,7 @@
             height: 125px;
             background: #ff0000;
             opacity:0;
+            -webkit-transition: all 0s ease;
         }
         #prev{
             width: 40px;
@@ -41,6 +43,17 @@
             border-radius:0 10px 10px 0;
             display: none;
             background: #ffffff url("img/prev.png") no-repeat center center;
+        }
+        #next{
+            width: 40px;
+            height: 80px;
+            position: absolute;
+            right:0;
+            top:50%;
+            -webkit-transform: translateY(-50%);
+            border-radius:0 10px 10px 0;
+            display: none;
+            background: #ffffff url("img/next.png") no-repeat center center;
         }
     </style>
 </head>
@@ -131,7 +144,9 @@
                 aSpan[i].style.background = 'url(img/' + this.index + '.jpg) '
                     +(oDiv.pos.col - 1) *-125 + 'px ' + (oDiv.pos.row - 1) * -125 + 'px';
             }
-            oPrev.style.display = 'block';
+                oPrev.style.display = 'block';
+                oNext.style.display = 'block';
+
             iNow = this.index;
 
 
@@ -144,6 +159,9 @@
                 oDiv.style.border = '5px solid #fff';
                 oDiv.style.transform = 'rotate('+(Math.random()*40-20)+'deg)';
                 aSpan[i].style.opacity = 0;
+                aSpan[i].style.webkitTransitionDelay = '0ms';
+                oPrev.style.display = 'none';
+                oNext.style.display = 'none';
             }
         }
         flag = !flag;
@@ -157,6 +175,16 @@
             aSpan[i].style.backgroundImage = 'url(img/'+iNow+'.jpg)';
         }
     }
+        oNext.onclick = function(){
+            iNow--;
+            if(iNow == 25){
+                iNow = 1;
+            }
+            for(var i=0; i<aSpan.length; i++){
+                aSpan[i].style.webkitTransitionDelay=Math.random()*500+'ms';
+                aSpan[i].style.backgroundImage = 'url(img/'+iNow+'.jpg)';
+            }
+        }
 }
 </script>
 </body>

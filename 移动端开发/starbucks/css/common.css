@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+#header{
+    height: 100px;
+    display: -webkit-box;
+    margin-top: 3px;
+    box-shadow: 0 -5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+#menu{
+    -webkit-box-flex: 5;
+    width: 0;
+    position: relative;
+}
+#menu span{
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    width: 30px;
+    text-align: center;
+    opacity: 0.7;
+    margin-left: 33px;
+    display: block;
+}
+#menu .menu-icon{
+    margin-top: 32px;
+}
+.menu-icon{
+    margin-left: 33px;
+}
+/*.menu-box{*/
+    /*width: 30px;*/
+    /*height: 40px;*/
+    /*position: absolute;*/
+    /*left: 55px;*/
+    /*top: 30px;*/
+/*}*/
+#logo img{
+    width: 73px;
+    max-width:100%;
+    margin-top: 14px;
+}
+#logo{
+    -webkit-box-flex: 2;
+    width: 0;
+    text-align: center;
+}
+#user-fo{
+    -webkit-box-flex: 5;
+    width: 0;
+}
+#user-fo p{
+    text-align: right;
+    font-size: 16px;
+    color: #4e4e4e;
+    margin-right:28px;
+
+}
+#user-fo .user-title{
+    margin-top: 30px;
+}
+#user-fo a{
+    color: #b89f7a;
+    font-size: 14px;
+    font-weight: 700;
+}
+@media screen and (max-width: 991px) {
+
+}
+@media screen and (max-width: 768px) {
+    .menu-icon{
+        margin-left: 15px;
+    }
+    #menu span{
+        margin-left: 15px;
+    }
+    #user-fo p{
+        font-size: 12px;
+        margin-right: 10px;
+    }
+    #user-fo a{
+        font-size: 12px;
+    }
+    #user-fo .user-title{
+        margin-right: 10px;
+    }
+}

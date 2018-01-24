@@ -44,29 +44,29 @@
         var html='';
         var iNow=0;
         for(var i=0;i<24;i++){
-            html+="<img class='img/' src='img/thumbs/"+(i+1)+".jpg'/>";
+            html+="<img class='img' src='img/thumbs/"+(i+1)+".jpg'/>";
         }
         $('#container').append(html);
-        $('.img').on('tap',function () {
+        $('.img').on('tap',function (e) {
             var idx=$(this).index();
             iNow=idx;
             $('#container').hide();
             $('#img-box').show().css('background-image','url(img/'+(idx+1)+'.jpg)');
             e.preventDefault();
         })
-        $('.img-box').on('tap',function () {
+        $('.img-box').on('tap',function (e) {
             $('#container').show();
             $('#img-box').hide();
             e.preventDefault();
         })
-        $('.img-box').on('swipeleft',function () {
+        $('#img-box').on('swipeleft',function () {
             iNow++;
             if(iNow==$('.img').length){
                 iNow=0;
             }
             $('#img-box').css('background-image','url(img/'+(iNow+1)+'.jpg)')
         })
-        $('.img-box').on('swiperight',function () {
+        $('#img-box').on('swiperight',function () {
             iNow--;
             if(iNow==-1){
             iNow==$('.img').length-1;

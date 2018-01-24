@@ -446,7 +446,7 @@
 /*家电结束*/
 /*内容开始*/
 .container-box{
-    height: 420px;
+    height: 480px;
 }
 .container-box .con-item{
     width: 296px;
@@ -555,5 +555,32 @@
     right: 0;
 }
 /*内容结束*/
+/*footer开始*/
+.list-service{
+    overflow: hidden;
+    padding:27px 0;
+    border-bottom:1px solid #e0e0e0 ;
+}
+.list-service li{
+    width: 243px;
+    float: left;
+    text-align: center;
+    position: relative;
+}
+.list-service li::after{
+    content:'';
+    width: 1px;
+    height: 25px;
+    position: absolute;
+    right:0;
+    top:0;
+    background: #e0e0e0;
+}
+.list-service li a{
+    color: #616161;
+}
 
 
+
+
+/*footer结束*/

@@ -80,7 +80,7 @@
 }
 .mainNav ul li { 
 	float:left; 
-    display: inline;
+    display: inline;//
 	margin-right:14px;
 	position: relative ;
 	z-index:100;
@@ -764,4 +764,9 @@ ul.rating li.five a:hover {background-position:0 -160px}
   opacity: 0.80;
   position:absolute;
   display:block;
+}
+.tooltip title{
+    position: absolute;
+    border: 1px solid #000000;
+    background: #CDE074;
 }

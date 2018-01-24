@@ -167,35 +167,80 @@
     /*-webkit-justify-content: center;*/
     /*!* 换行显示*!*/
     /*-webkit-flex-wrap:wrap;*/
+
+
 }
 .wsg-container{
-    padding: 30px 0px;
+    /*padding: 30px 0px;*/
+    /*width: 767px;*/
+    /*overflow: hidden;*/
+    /*margin: 0 auto;*/
+    /*box-sizing: border-box;*/
     width: 767px;
-    overflow: hidden;
-    margin: 0 auto;
+    height: 220px;
+    margin: auto;
+
+
+}
+.wsg-container-block{
+    display: flex;
+    height: 220px;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    box-sizing: border-box;
 
 }
 .wsg-container-img1{
-    width: 177px;
+    /*width: 177px;*/
+    /*height: 127.5px;*/
+    /*background: url(../img/wsg-title.png) center center no-repeat;*/
+    /*background-size: contain;*/
+    width: 250px;
+    height: 127px;
+    background: url(../img/wsg-title.png) center center no-repeat;
+
 }
 .wsg-container-img2{
-    width: 107px;
+    /*!*width: 107px;*!*/
+    /*width: 150px;*/
+    /*height: 150px;*/
+    /*background: url(../img/wsg-qrcode.png) center center no-repeat;*/
+    /*background-size: contain;*/
+    width: 150px;
+    height: 150px;
+    background: url(../img/wsg-qrcode.png) center center no-repeat;
+
 }
 .wsg-container-img3{
-    width: 99px;
+    /*!*width: 99px;*!*/
+    /*width: 150px;*/
+    /*height: 162px;*/
+    /*background: url(../img/wsg-cup.png) center center no-repeat;*/
+    /*background-size: contain;*/
+    width: 150px;
+    height: 162px;
+    background: url(../img/wsg-cup.png) center center no-repeat;
 }
 .wsg-container-img4{
-    width: 185px;
+    /*!*width: 185px;*!*/
+    /*width: 280px;*/
+    /*height: 142.8px;*/
+    /*background: url(../img/wsg-wording.png) center center no-repeat;*/
+    /*background-size: contain;*/
+    width: 280px;
+    height: 142px;
+    background: url(../img/wsg-wording.png) center center no-repeat;
 }
-.wsg-container-item{
-    margin: 0 23px;
-}
-.containerl{
-    float: left;
-}
-.containerr{
-    float: right;
-}
+/*.wsg-container-item{*/
+    /*margin: 0 23px;*/
+/*}*/
+/*.containerl{*/
+    /*float: left;*/
+/*}*/
+/*.containerr{*/
+    /*float: right;*/
+/*}*/
 
 
 
@@ -324,10 +369,14 @@
         width:100%;
 
     }
-    #mosaic .rightcont{
+    #mosaic .rightcont {
         display: block;
-        width:100%;
+        width: 100%;
     }
+    /*}*/
+    /*#wsg{*/
+        /*background: #000000;*/
+    /*}*/
 
 }
 

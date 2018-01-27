@@ -4,12 +4,12 @@ const devServer = require('webpack-dev-server');
 const HtmlPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const glob= require('glob');
+const PurifyCSSPlugin= require('purifycss-webpack');
+const webpack= require('webpack');
+const entry= require('./webpack_config/entry_webpack');
 module.exports= {
-    entry:{
-        index:'./src/index.js',
-        index2:'./src/index2.js'
-        
-    },
+    entry:entry,
     output:{
         path:path.resolve(__dirname,'dist'),
         filename:'[name].js',
@@ -22,7 +22,12 @@ module.exports= {
                 //use:['style-loader','css-loader']
                 use: ExtractTextPlugin.extract({
                     fallback:'style-loader',
-                    use:'css-loader'
+                    use:[{
+                        loader:'css-loader',
+                        options:{
+                            importLoaders:1
+                        }
+                    },'postcss-loader']
                 })
             },{
                 test:/\.(png|jpg|gif)/,
@@ -37,6 +42,40 @@ module.exports= {
             },{
                 test:/\.html$/i,
                 use:['html-withimg-loader']
+            },{
+                test:/\.scss$/,
+                // use:[
+                //     {
+                //         loader:'style-loader'
+                //     },
+                //     {
+                //         loader:'css-loader'
+                //     },
+                //     {
+                //         loader:'sass-loader'
+                //     }
+                // ]
+                use:ExtractTextPlugin.extract({
+                    use:[
+                        {
+                            loader:'css-loader'
+                        },
+                        {
+                            loader:'sass-loader'
+                        }
+                    ],
+                    fallback:'style-loader'
+                })
+            },
+            {
+                test:/\.js$/,
+                use:[{
+                    loader:'babel-loader',
+                    options:{
+                        presets:['env']
+                    }
+                }],
+                exclude:'/node_modules/'
             }
         
         ]
@@ -51,6 +90,20 @@ module.exports= {
             chunks:['index']
         }),
         new ExtractTextPlugin("css/index.css"),
+        new PurifyCSSPlugin(
+            {
+                paths:glob.sync('./src/index.html')
+            }
+        ),
+        new webpack.BannerPlugin("。。。。"),
+        // new webpack.ProvidePlugin({
+        //     $:'jquery'
+        // }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name:'jquery',
+            filename:'js/jquery.js',
+            minChunks:2
+        })
         // new UglifyJsPlugin()
     ],
     devServer:{

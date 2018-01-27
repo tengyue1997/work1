@@ -318,12 +318,12 @@ label.lbl-3 {
         padding: 10px 0;
     }
     .save{
-        height:20px;
-        padding-bottom:100px;
+        /*height:20px;*/
+        margin-bottom:50px;
     }
-    .save span{
-        display:block;
-        padding-bottom:100px;
-    }
+    /*.save span{*/
+        /*display:block;*/
+        /*padding-bottom:100px;*/
+    /*}*/
 }
 /*--end-responsive-design--*/

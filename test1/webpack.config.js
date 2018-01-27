@@ -8,6 +8,7 @@ const glob= require('glob');
 const PurifyCSSPlugin= require('purifycss-webpack');
 const webpack= require('webpack');
 const entry= require('./webpack_config/entry_webpack');
+const CopyPlugin=require('copy-webpack-plugin');
 module.exports= {
     entry:entry,
     output:{
@@ -87,7 +88,7 @@ module.exports= {
             },
             hash:true,
             template:"./src/index.html",
-            chunks:['index']
+            chunks:['index']//['jquery','index']
         }),
         new ExtractTextPlugin("css/index.css"),
         new PurifyCSSPlugin(
@@ -100,10 +101,14 @@ module.exports= {
         //     $:'jquery'
         // }),
         new webpack.optimize.CommonsChunkPlugin({
-            name:'jquery',
-            filename:'js/jquery.js',
+            name:['jquery','vue'],
+            filename:'js/[name].js',
             minChunks:2
-        })
+        }),
+        new CopyPlugin([{
+            from:'./src/public/',
+            to:'./public'
+        }])
         // new UglifyJsPlugin()
     ],
     devServer:{
@@ -111,5 +116,11 @@ module.exports= {
         host:'localhost',
         port:'8081'
     }
+    // ,
+    // watchOptions:{
+    //     poll:1000,
+    //     aggregeateTimeout:500,
+    //     ignored:/node_module/
+    // }
 
 }

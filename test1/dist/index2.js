@@ -1,7 +1,7 @@
 /*! 。。。。 */
-webpackJsonp([1],{
+webpackJsonp([2],{
 
-/***/ 3:
+/***/ 8:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11,4 +11,4 @@ console.log("woshijs2");
 
 /***/ })
 
-},[3]);
+},[8]);

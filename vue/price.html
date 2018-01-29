@@ -34,6 +34,9 @@
         .bg{
             background: red;
         }
+        .numb{
+            float: right
+        }
     </style>
 </head>
 <body>
@@ -47,7 +50,7 @@
         <hr/>
         <div>
             <span>total</span>
-            <span>0</span>
+            <span class="numb">{{num}}</span>
         </div>
     </div>
 
@@ -58,18 +61,24 @@
         el:'#app',
         data:{
             arr:[
-                {name:'aa',price:'123',isBg:false},
-                {name:'bb',price:'456',isBg:false},
-                {name:'cc',price:'789',isBg:false},
-                {name:'dd',price:'888',isBg:false},
-                {name:'ee',price:'666',isBg:false}
-            ]
+                {name:'aa',price:123,isBg:false},
+                {name:'bb',price:456,isBg:false},
+                {name:'cc',price:789,isBg:false},
+                {name:'dd',price:888,isBg:false},
+                {name:'ee',price:666,isBg:false}
+            ],
+            num:0
             // isBg:false
         },
         methods:{
             fn:function(o){
                 // this.isBg = true;
                 o.isBg=!o.isBg;
+                if(o.isBg){
+                    this.num+=o.price;
+                }else{
+                    this.num-=o.price;
+                }
             }
         }
     })

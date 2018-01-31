@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #ul1{
+            list-style: none;
+            width: 120px;
+            border: 1px solid #CCCCCC;
+            border-radius: 5px;
+            padding: 5px 0px;
+            text-align: center;
+            display: none;
+            position: absolute;
+        }
+        #ul1 li{
+            height: 24px;
+            line-height: 24px;
+            color: #555;
+            font-size: 12px;
+        }
+        #ul1 li:hover{
+            background:#98E0E6;
+        }
+    </style>
+</head>
+<body>
+<ul id="ul1">
+    <li>设为代办</li>
+    <li>设为已读</li>
+    <li>置顶邮件</li>
+    <li>添加备注</li>
+    <li>删除</li>
+</ul>
+
+<script>
+    var oUL = document.getElementById('ul1');
+    var oLi = oUL.getElementsByTagName('li');
+    document.oncontextmenu = function (e) {
+        e = e||window.event;
+        oUL.style.display = 'block';
+        oUL.style.left= e.clientX+'px';
+        oUL.style.top= e.clientY+'px';
+        return false;
+//        console.log(e.clientX+","+e.clientY);
+    }
+    document.onclick = function () {
+        oUL.style.display= 'none';
+    }
+    for(var i=0;i<oLi.length;i++){
+        oLi[i].onclick = function () {
+            console.log(this.innerHTML);
+        }
+    }
+
+
+
+</script>
+</body>
+</html>

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <!-- <img src="./assets/logo.png">
     <router-link to="/">首页</router-link>
-    <router-link to="/test/">test</router-link>
+    <router-link to="/test/">test</router-link> -->
     <router-view/>
   </div>
 </template>

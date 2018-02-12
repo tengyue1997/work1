@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #ffff00;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <script>
+        var oDiv1 = document.getElementById('div1');
+        oDiv1.onclick = function () {
+            var timer = setInterval(function () {
+                oDiv1.style.width = oDiv1.offsetWidth + 100 +'px';
+                if(oDiv1.offsetWidth==500){
+                    clearInterval(timer);
+                }
+            },500)
+
+        }
+    </script>
+</body>
+</html>
